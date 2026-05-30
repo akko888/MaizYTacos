@@ -32,6 +32,7 @@ position = Vector2(279, 495)
 
 [node name="CharacterBody2D2" parent="." unique_id=123105804 instance=ExtResource("1_gjdyk")]
 position = Vector2(1018, 499)
+screenSide = 1
 
 [node name="Wall1" type="StaticBody2D" parent="." unique_id=638350149]
 position = Vector2(0, 360)
