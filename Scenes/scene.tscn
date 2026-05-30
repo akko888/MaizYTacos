@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c47d441fvo056"]
+
+[ext_resource type="PackedScene" uid="uid://bi5oo3ewqykqv" path="res://Scenes/Player.tscn" id="1_gjdyk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf2k1"]
+size = Vector2(1280, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjdyk"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6gg1"]
+size = Vector2(20, 720)
+
+[node name="Scene" type="Node2D" unique_id=2142566041]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1910788280]
+position = Vector2(0, 660)
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=427385566]
+offset_right = 1280.0
+offset_bottom = 60.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1462669934]
+position = Vector2(640, 30)
+shape = SubResource("RectangleShape2D_gf2k1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1866117849]
+position = Vector2(640, 360)
+
+[node name="CharacterBody2D" parent="." unique_id=2135870302 instance=ExtResource("1_gjdyk")]
+position = Vector2(279, 495)
+
+[node name="CharacterBody2D2" parent="." unique_id=123105804 instance=ExtResource("1_gjdyk")]
+position = Vector2(1018, 499)
+
+[node name="Wall1" type="StaticBody2D" parent="." unique_id=638350149]
+position = Vector2(0, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1" unique_id=369982633]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_gjdyk")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=999800994]
+position = Vector2(1280, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=1261021541]
+position = Vector2(10, 0)
+shape = SubResource("RectangleShape2D_p6gg1")
