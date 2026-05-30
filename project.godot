@@ -25,6 +25,11 @@ window/stretch/aspect="expand"
 
 pointing/emulate_touch_from_mouse=true
 
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Characters"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
