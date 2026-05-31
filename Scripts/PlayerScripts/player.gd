@@ -8,6 +8,9 @@ const FRICTION = 625.0
 
 enum Side { LEFT, RIGHT }
 
+# Player Variables
+@onready var sprite = $AnimatedSprite2D
+
 # Export Variables
 @export var screenSide := Side.LEFT
 
@@ -21,7 +24,7 @@ var startSwipe = Vector2.ZERO
 
 func _ready() -> void:
 	if screenSide == Side.RIGHT:
-		$Sprite2D.flip_h = true
+		sprite.flip_h = true
 		facing = -1.0
 	stateMachine = StateMachine.new()
 	stateMachine.change_state(IdleState.new(self, stateMachine))
@@ -33,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x = move_toward(velocity.x , 0, FRICTION * delta)
 	
-	$Sprite2D.flip_h = facing < 0
+	sprite.flip_h = facing < 0
 	
 	stateMachine.update(delta)
 	move_and_slide()

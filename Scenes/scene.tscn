@@ -8,6 +8,9 @@ size = Vector2(1280, 60)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjdyk"]
 size = Vector2(20, 720)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrus4"]
+size = Vector2(1280, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6gg1"]
 size = Vector2(20, 720)
 
@@ -28,10 +31,10 @@ shape = SubResource("RectangleShape2D_gf2k1")
 position = Vector2(640, 360)
 
 [node name="CharacterBody2D" parent="." unique_id=2135870302 instance=ExtResource("1_gjdyk")]
-position = Vector2(279, 495)
+position = Vector2(216, 593)
 
 [node name="CharacterBody2D2" parent="." unique_id=123105804 instance=ExtResource("1_gjdyk")]
-position = Vector2(1018, 499)
+position = Vector2(1043, 586)
 screenSide = 1
 
 [node name="Wall1" type="StaticBody2D" parent="." unique_id=638350149]
@@ -40,6 +43,13 @@ position = Vector2(0, 360)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1" unique_id=369982633]
 position = Vector2(-10, 0)
 shape = SubResource("RectangleShape2D_gjdyk")
+
+[node name="Wall3" type="StaticBody2D" parent="." unique_id=2078075770]
+position = Vector2(640, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" unique_id=1546876884]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_lrus4")
 
 [node name="Wall2" type="StaticBody2D" parent="." unique_id=999800994]
 position = Vector2(1280, 360)

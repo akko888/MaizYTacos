@@ -2,7 +2,8 @@ class_name DashState
 extends PlayerState
 
 func enter() -> void:
-	pass
+	print("Dash state")
+	player.sprite.play("Dash")
 
 func exit() -> void:
 	pass

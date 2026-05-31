@@ -2,7 +2,7 @@ class_name IdleState
 extends PlayerState
 
 func enter() -> void:
-	pass
+	player.sprite.play("Idle")
 	
 func handle_input(event: InputEvent):
 	if not event is InputEventScreenTouch:

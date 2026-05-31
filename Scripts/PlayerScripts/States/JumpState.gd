@@ -2,14 +2,15 @@ class_name JumpState
 extends PlayerState
 
 func enter() -> void:
-	pass
+	print("Jump state")
+	player.sprite.play("Jump")
 	
 func exit() -> void:
 	pass
 	
 func physics_process(_delta: float) -> void:
-	if player.is_on_floor():
-		stateMachine.change_state(IdleState.new(player, stateMachine))
+	if player.is_on_floor() and player.velocity.y >= 0:
+		stateMachine.change_state(LandState.new(player, stateMachine))
 		
 func handle_input(_event: InputEvent) -> void:
 	if _event is not InputEventScreenTouch:
@@ -25,3 +26,4 @@ func handle_input(_event: InputEvent) -> void:
 		if abs(swipe.x) > abs(swipe.y):
 			player.facing = sign(swipe.x)
 			player.velocity.x = player.DASH_VELOCITY * sign(swipe.x)
+			stateMachine.change_state(DashState.new(player, stateMachine))
