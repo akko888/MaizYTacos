@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dnj1bm20465vh" path="res://PlaceHolders/Cat_player/Cat_sheets/Cat_spining_1.png" id="5_o3h8g"]
 [ext_resource type="Texture2D" uid="uid://cutvg6k7jnqwt" path="res://PlaceHolders/Cat_player/Cat_sheets/Cat_jump_2.png" id="6_yoq75"]
 [ext_resource type="Texture2D" uid="uid://dbjk76j1wcxg2" path="res://PlaceHolders/Cat_player/Cat_sheets/Cat_landding_1.png" id="7_ksbbd"]
+[ext_resource type="Texture2D" uid="uid://dxa7ncqyfdlbk" path="res://PlaceHolders/Cat_player/Cat_sheets/Cat_dead_1.png" id="7_o3h8g"]
 [ext_resource type="Script" uid="uid://dvf51hxurcu2w" path="res://Scripts/PlayerScripts/Combat/Hitbox.gd" id="8_megsn"]
 [ext_resource type="Script" uid="uid://dsdvl7e1684tk" path="res://Scripts/PlayerScripts/Combat/Hurtbox.gd" id="9_yoq75"]
 
@@ -98,6 +99,26 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("2_52ee3")
 region = Rect2(96, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkrn1"]
+atlas = ExtResource("7_o3h8g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpo1r"]
+atlas = ExtResource("7_o3h8g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqity"]
+atlas = ExtResource("7_o3h8g")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opqna"]
+atlas = ExtResource("7_o3h8g")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00okb"]
+atlas = ExtResource("7_o3h8g")
+region = Rect2(128, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5v66d"]
 atlas = ExtResource("5_ksbbd")
 region = Rect2(0, 0, 32, 32)
@@ -159,7 +180,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Attack1",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -223,6 +244,26 @@ animations = [{
 "loop": true,
 "name": &"Dash",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkrn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpo1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqity")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opqna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00okb")
+}],
+"loop": false,
+"name": &"Dead",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -302,7 +343,7 @@ stats = SubResource("Resource_ksbbd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1752291135]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_nn08x")
-animation = &"Attack3"
+animation = &"Attack1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2128372684]
 shape = SubResource("CapsuleShape2D_gntrk")

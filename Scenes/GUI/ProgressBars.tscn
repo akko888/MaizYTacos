@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://da7whyxmmhutt"]
 
 [ext_resource type="Script" uid="uid://bi3oxlf545lsg" path="res://Scripts/GUI/HealthBar.gd" id="1_t4po4"]
+[ext_resource type="LabelSettings" uid="uid://bn7e4pho3454k" path="res://Config/NormalLabel.tres" id="1_ty7ae"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aldai"]
 load_path = "res://.godot/imported/progress bar least rounded under.png-e3e70c40d050bb95250ba52adbde31ce.ctex"
@@ -28,61 +29,57 @@ offset_bottom = -0.08000946
 grow_horizontal = 2
 alignment = 1
 
-[node name="Player1" type="HBoxContainer" parent="." unique_id=1519969166]
-custom_minimum_size = Vector2(600, 0)
-layout_mode = 2
-theme_override_constants/separation = 50
-
-[node name="Name" type="Label" parent="Player1" unique_id=1087784129]
+[node name="P1" type="Label" parent="." unique_id=440465110]
 layout_mode = 2
 text = "Player 1"
+label_settings = ExtResource("1_ty7ae")
 
-[node name="Control" type="Control" parent="Player1" unique_id=1630868631]
+[node name="labelSeparator" type="HSeparator" parent="." unique_id=1259568852]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Bar1" type="Control" parent="." unique_id=1065773955]
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Player1/Control" unique_id=755047729]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -224.0
-offset_bottom = -56.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Bar1" unique_id=755047729]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 8.0
 scale = Vector2(8, 8)
 texture_under = SubResource("CompressedTexture2D_aldai")
 texture_over = SubResource("CompressedTexture2D_0hwhf")
 texture_progress = SubResource("CompressedTexture2D_iv1is")
 script = ExtResource("1_t4po4")
 
-[node name="Player2" type="HBoxContainer" parent="." unique_id=226970264]
-custom_minimum_size = Vector2(600, 0)
+[node name="middleSeparator" type="HSeparator" parent="." unique_id=685271076]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_constants/separation = 50
-alignment = 2
 
-[node name="Control" type="Control" parent="Player2" unique_id=2079290801]
+[node name="Bar2" type="Control" parent="." unique_id=364740353]
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Player2/Control" unique_id=1505248899]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -224.0
-offset_bottom = -56.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="Bar2" unique_id=1505248899]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 8.0
 scale = Vector2(8, 8)
 texture_under = SubResource("CompressedTexture2D_bfvxf")
 texture_over = SubResource("CompressedTexture2D_rwa65")
 texture_progress = SubResource("CompressedTexture2D_jyjwy")
 script = ExtResource("1_t4po4")
 
-[node name="Name" type="Label" parent="Player2" unique_id=367801761]
+[node name="labelSeparator2" type="HSeparator" parent="." unique_id=813760644]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="P2" type="Label" parent="." unique_id=437219922]
 layout_mode = 2
 text = "Player2"
+label_settings = ExtResource("1_ty7ae")

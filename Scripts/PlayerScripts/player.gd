@@ -11,6 +11,7 @@ enum Side { LEFT, RIGHT }
 @onready var hurtbox = $Hurtbox
 @onready var hitbox = $Hitbox
 var health: float
+var isDead: bool = false
 # Export Variables
 @export var screenSide := Side.LEFT
 @export var stats: CharacterStats
@@ -36,8 +37,10 @@ func _ready() -> void:
 	stateMachine = StateMachine.new()
 	stateMachine.change_state(IdleState.new(self, stateMachine))
 
-
 func _physics_process(delta: float) -> void:
+	if isDead:
+		return
+	
 	if hitstopTimer > 0.0:
 		hitstopTimer -= delta
 		sprite.pause()
@@ -64,11 +67,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	stateMachine.input(event)
 
 func take_damage(dmg: float, kb: float, dir: float) -> void:
+	if isDead:
+		return
+	
 	health = max(0.0, health - dmg)
 	health_changed.emit(health, stats.maxHealth)
 	print(name, ", Damage took: ", dmg, ", Health: ", health)
 	if health == 0.0:
-		died.emit()
+		stateMachine.change_state(DeadState.new(self, stateMachine))
+		return
 	stateMachine.change_state(HitState.new(self, stateMachine, kb, dir))
 
 func apply_hitstop(duration: float) -> void:

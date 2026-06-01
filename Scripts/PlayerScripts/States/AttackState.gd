@@ -1,7 +1,7 @@
 class_name AttackState
 extends PlayerState
 
-const COMBO_WINDOW: float = 0.25
+const COMBO_WINDOW: float = 0.45
 
 var step: int
 var comboWindowTimer: float = 0.0
