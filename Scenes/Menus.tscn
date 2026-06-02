@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://b55mimj1gd1ot"]
+
+[ext_resource type="Script" uid="uid://ysx12jkfuyc0" path="res://Scripts/Scene/menus.gd" id="1_jfwsv"]
+[ext_resource type="Texture2D" uid="uid://fvgcm1328vyh" path="res://Assets/Images/Icon.png" id="2_ek14q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dkch6"]
+font_size = 48
+font_color = Color(0.9607843, 0.92941177, 0.7294118, 1)
+outline_size = 16
+outline_color = Color(0.89411765, 0.5803922, 0.22745098, 1)
+shadow_size = 48
+shadow_color = Color(0.12156863, 0.05490196, 0.10980392, 1)
+
+[node name="Control" type="Control" unique_id=1823180006]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jfwsv")
+
+[node name="TitleScreen" type="Control" parent="." unique_id=2063810978]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TitleScreen" unique_id=1324972985]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -102.0
+offset_right = 200.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="TitleScreen/VBoxContainer" unique_id=1757867205]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="TitleScreen/VBoxContainer" unique_id=1851247605]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TitleScreen" unique_id=573200070]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 34.0
+offset_right = 225.0
+offset_bottom = 234.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="TitleScreen/HBoxContainer" unique_id=938935758]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_ek14q")
+
+[node name="Label" type="Label" parent="TitleScreen/HBoxContainer" unique_id=995303793]
+layout_mode = 2
+text = "Puños de Maíz"
+label_settings = SubResource("LabelSettings_dkch6")
+
+[node name="ModeSelect" type="Control" parent="." unique_id=1804664147]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharSelect" type="Control" parent="." unique_id=1034990148]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StageSelect" type="Control" parent="." unique_id=1260477537]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Gallery" type="Control" parent="." unique_id=923881135]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
