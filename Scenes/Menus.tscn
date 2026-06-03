@@ -10,8 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://byeguhv1yxfe7" path="res://Assets/Buttons/Settings_0003.png" id="7_t0msg"]
 [ext_resource type="Texture2D" uid="uid://dskxme86v6uur" path="res://Assets/Buttons/Settings_0002.png" id="8_cr7co"]
 [ext_resource type="Texture2D" uid="uid://dkntfjvkjs2g" path="res://Assets/Buttons/knife_0001.png" id="9_jcodu"]
+[ext_resource type="Texture2D" uid="uid://bvkgglk6yn44t" path="res://Assets/Buttons/ModeSel/VsButton_0001.png" id="10_10m4s"]
 [ext_resource type="Texture2D" uid="uid://d3x5ssdhspxw" path="res://Assets/Buttons/knife_0003.png" id="10_xw5h8"]
+[ext_resource type="Texture2D" uid="uid://b5ctqesx6b8jq" path="res://Assets/Buttons/ModeSel/VsButton_0003.png" id="11_4sq2c"]
 [ext_resource type="Texture2D" uid="uid://cr2u6oh4cx856" path="res://Assets/Buttons/knife_0002.png" id="11_yuk0h"]
+[ext_resource type="Texture2D" uid="uid://baxodsna00yu6" path="res://Assets/Buttons/ModeSel/VsButton_0002.png" id="12_2gktr"]
+[ext_resource type="Texture2D" uid="uid://cipq1y8pqpjj2" path="res://Assets/Buttons/ModeSel/arcadeButton_0001.png" id="13_ocrow"]
+[ext_resource type="Texture2D" uid="uid://cdtb0ou62v66i" path="res://Assets/Buttons/ModeSel/arcadeButton_0003.png" id="14_h1bg7"]
+[ext_resource type="Texture2D" uid="uid://bqw7u0sknkxmv" path="res://Assets/Buttons/ModeSel/arcadeButton_0002.png" id="15_31om1"]
+[ext_resource type="Texture2D" uid="uid://b4foqriicb31n" path="res://Assets/Buttons/ModeSel/tutorial_0001.png" id="16_u8b8k"]
+[ext_resource type="Texture2D" uid="uid://bei13fwq6o2nl" path="res://Assets/Buttons/ModeSel/tutorial_0003.png" id="17_5n7og"]
+[ext_resource type="Texture2D" uid="uid://clakeudmdy77h" path="res://Assets/Buttons/ModeSel/tutorial_0002.png" id="18_waiuv"]
+[ext_resource type="Texture2D" uid="uid://b6lowvplenfbc" path="res://Assets/Buttons/ModeSel/pastorButton_0001.png" id="19_3kyn4"]
+[ext_resource type="Texture2D" uid="uid://dbfplqfv3rrh8" path="res://Assets/Buttons/ModeSel/pastorButton_0003.png" id="20_rndyb"]
+[ext_resource type="Texture2D" uid="uid://bjlixcyks17yk" path="res://Assets/Buttons/ModeSel/pastorButton_0002.png" id="21_subhu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iypqj"]
+font_size = 37
+font_color = Color(0.9607843, 0.92941177, 0.7294118, 1)
 
 [node name="Control" type="Control" unique_id=1823180006]
 layout_mode = 3
@@ -23,7 +39,6 @@ grow_vertical = 2
 script = ExtResource("1_jfwsv")
 
 [node name="TitleScreen" type="Control" parent="." unique_id=2063810978]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -128,6 +143,7 @@ texture_pressed = ExtResource("7_t0msg")
 texture_hover = ExtResource("8_cr7co")
 
 [node name="ModeSelect" type="Control" parent="." unique_id=1804664147]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -142,31 +158,93 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -529.5
-offset_top = -140.0
-offset_right = 530.5
-offset_bottom = 190.0
+offset_left = -515.0
+offset_top = -123.0
+offset_right = 509.0
+offset_bottom = 133.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
-[node name="TextureButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1023017361]
+[node name="VsButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1023017361]
 layout_mode = 2
 size_flags_horizontal = 3
+texture_normal = ExtResource("10_10m4s")
+texture_pressed = ExtResource("11_4sq2c")
+texture_hover = ExtResource("12_2gktr")
 
-[node name="TextureButton2" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1784932126]
+[node name="ArcadeButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1784932126]
 layout_mode = 2
 size_flags_horizontal = 3
+texture_normal = ExtResource("13_ocrow")
+texture_pressed = ExtResource("14_h1bg7")
+texture_hover = ExtResource("15_31om1")
 
-[node name="TextureButton3" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1676322019]
+[node name="Label" type="Label" parent="ModeSelect/HBoxContainer/ArcadeButton" unique_id=156548671]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.5
+offset_top = -11.0
+offset_right = 46.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Arcade"
+label_settings = SubResource("LabelSettings_iypqj")
+
+[node name="TutorialButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1676322019]
 layout_mode = 2
 size_flags_horizontal = 3
+texture_normal = ExtResource("16_u8b8k")
+texture_pressed = ExtResource("17_5n7og")
+texture_hover = ExtResource("18_waiuv")
 
-[node name="TextureButton4" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=699615568]
+[node name="Label" type="Label" parent="ModeSelect/HBoxContainer/TutorialButton" unique_id=1522779887]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -10.0
+offset_right = 50.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Tutorial"
+label_settings = SubResource("LabelSettings_iypqj")
+
+[node name="PastorButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=699615568]
 layout_mode = 2
 size_flags_horizontal = 3
+texture_normal = ExtResource("19_3kyn4")
+texture_pressed = ExtResource("20_rndyb")
+texture_hover = ExtResource("21_subhu")
 
-[node name="TextureRect" type="TextureRect" parent="ModeSelect" unique_id=600504983]
+[node name="Label" type="Label" parent="ModeSelect/HBoxContainer/PastorButton" unique_id=635596025]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -9.0
+offset_right = 54.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Extras"
+label_settings = SubResource("LabelSettings_iypqj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="TextureRect" parent="ModeSelect" unique_id=600504983]
 layout_mode = 0
 offset_left = 35.0
 offset_top = 35.0
@@ -175,7 +253,7 @@ offset_bottom = 185.0
 texture = ExtResource("2_ek14q")
 expand_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="ModeSelect" unique_id=78147959]
+[node name="BackButton" type="TextureButton" parent="ModeSelect" unique_id=78147959]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -189,7 +267,7 @@ texture_normal = ExtResource("9_jcodu")
 texture_pressed = ExtResource("10_xw5h8")
 texture_hover = ExtResource("11_yuk0h")
 
-[node name="Label" type="Label" parent="ModeSelect/TextureButton" unique_id=1521187219]
+[node name="Label" type="Label" parent="ModeSelect/BackButton" unique_id=1521187219]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -233,3 +311,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[connection signal="pressed" from="TitleScreen/ButtonsContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ModeSelect/HBoxContainer/VsButton" to="." method="_on_vs_button_pressed"]
+[connection signal="pressed" from="ModeSelect/BackButton" to="." method="_on_back_button_pressed"]
