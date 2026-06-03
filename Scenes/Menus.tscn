@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://b55mimj1gd1ot"]
 
 [ext_resource type="Script" uid="uid://ysx12jkfuyc0" path="res://Scripts/Scene/menus.gd" id="1_jfwsv"]
-[ext_resource type="Texture2D" uid="uid://fvgcm1328vyh" path="res://Assets/Images/Icon.png" id="2_ek14q"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_dkch6"]
-font_size = 48
-font_color = Color(0.9607843, 0.92941177, 0.7294118, 1)
-outline_size = 16
-outline_color = Color(0.89411765, 0.5803922, 0.22745098, 1)
-shadow_size = 48
-shadow_color = Color(0.12156863, 0.05490196, 0.10980392, 1)
+[ext_resource type="Texture2D" uid="uid://b5d5osp6lo1nf" path="res://Assets/Buttons/ChiliButton_0001.png" id="2_8smt0"]
+[ext_resource type="Texture2D" uid="uid://cl44nl0o2acam" path="res://Assets/Images/Title.png" id="2_ek14q"]
+[ext_resource type="Texture2D" uid="uid://1f1kms0sgftv" path="res://Assets/Buttons/ChiliButton_0003.png" id="3_t0msg"]
+[ext_resource type="Texture2D" uid="uid://cackrwrb8usen" path="res://Assets/Buttons/ChiliButton_0002.png" id="4_cr7co"]
+[ext_resource type="LabelSettings" uid="uid://ccmam6ggtveo0" path="res://Config/MenuLabel.tres" id="5_xw5h8"]
+[ext_resource type="Texture2D" uid="uid://catenh5rist5x" path="res://Assets/Buttons/Settings_0001.png" id="6_8smt0"]
+[ext_resource type="Texture2D" uid="uid://byeguhv1yxfe7" path="res://Assets/Buttons/Settings_0003.png" id="7_t0msg"]
+[ext_resource type="Texture2D" uid="uid://dskxme86v6uur" path="res://Assets/Buttons/Settings_0002.png" id="8_cr7co"]
+[ext_resource type="Texture2D" uid="uid://dkntfjvkjs2g" path="res://Assets/Buttons/knife_0001.png" id="9_jcodu"]
+[ext_resource type="Texture2D" uid="uid://d3x5ssdhspxw" path="res://Assets/Buttons/knife_0003.png" id="10_xw5h8"]
+[ext_resource type="Texture2D" uid="uid://cr2u6oh4cx856" path="res://Assets/Buttons/knife_0002.png" id="11_yuk0h"]
 
 [node name="Control" type="Control" unique_id=1823180006]
 layout_mode = 3
@@ -21,57 +23,6 @@ grow_vertical = 2
 script = ExtResource("1_jfwsv")
 
 [node name="TitleScreen" type="Control" parent="." unique_id=2063810978]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TitleScreen" unique_id=1324972985]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -102.0
-offset_right = 200.0
-offset_bottom = 102.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureButton" type="TextureButton" parent="TitleScreen/VBoxContainer" unique_id=1757867205]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-
-[node name="TextureButton2" type="TextureButton" parent="TitleScreen/VBoxContainer" unique_id=1851247605]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TitleScreen" unique_id=573200070]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -225.0
-offset_top = 34.0
-offset_right = 225.0
-offset_bottom = 234.0
-grow_horizontal = 2
-
-[node name="TextureRect" type="TextureRect" parent="TitleScreen/HBoxContainer" unique_id=938935758]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("2_ek14q")
-
-[node name="Label" type="Label" parent="TitleScreen/HBoxContainer" unique_id=995303793]
-layout_mode = 2
-text = "Puños de Maíz"
-label_settings = SubResource("LabelSettings_dkch6")
-
-[node name="ModeSelect" type="Control" parent="." unique_id=1804664147]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -79,6 +30,182 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="TitleScreen" unique_id=1324972985]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -45.0
+offset_right = 200.0
+offset_bottom = 215.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="TextureButton" parent="TitleScreen/ButtonsContainer" unique_id=1757867205]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("2_8smt0")
+texture_pressed = ExtResource("3_t0msg")
+texture_hover = ExtResource("4_cr7co")
+
+[node name="Label" type="Label" parent="TitleScreen/ButtonsContainer/StartButton" unique_id=1871692577]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -65.0
+offset_right = 49.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Jugar"
+label_settings = ExtResource("5_xw5h8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GalleryButton" type="TextureButton" parent="TitleScreen/ButtonsContainer" unique_id=1851247605]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("2_8smt0")
+texture_pressed = ExtResource("3_t0msg")
+texture_hover = ExtResource("4_cr7co")
+
+[node name="Label" type="Label" parent="TitleScreen/ButtonsContainer/GalleryButton" unique_id=1776974211]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -62.0
+offset_right = 58.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Galería"
+label_settings = ExtResource("5_xw5h8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TitleScreen" unique_id=1422726309]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.0
+offset_top = 26.0
+offset_right = 132.0
+offset_bottom = 290.0
+grow_horizontal = 2
+texture = ExtResource("2_ek14q")
+
+[node name="TextureButton" type="TextureButton" parent="TitleScreen" unique_id=974985416]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -130.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("6_8smt0")
+texture_pressed = ExtResource("7_t0msg")
+texture_hover = ExtResource("8_cr7co")
+
+[node name="ModeSelect" type="Control" parent="." unique_id=1804664147]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ModeSelect" unique_id=1529199280]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -529.5
+offset_top = -140.0
+offset_right = 530.5
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="TextureButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1023017361]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton2" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1784932126]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton3" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1676322019]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton4" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=699615568]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ModeSelect" unique_id=600504983]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 185.0
+offset_bottom = 185.0
+texture = ExtResource("2_ek14q")
+expand_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="ModeSelect" unique_id=78147959]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_top = 30.0
+offset_right = -24.0
+offset_bottom = 158.0
+grow_horizontal = 0
+texture_normal = ExtResource("9_jcodu")
+texture_pressed = ExtResource("10_xw5h8")
+texture_hover = ExtResource("11_yuk0h")
+
+[node name="Label" type="Label" parent="ModeSelect/TextureButton" unique_id=1521187219]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -9.0
+offset_right = 52.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Atrás"
+label_settings = ExtResource("5_xw5h8")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CharSelect" type="Control" parent="." unique_id=1034990148]
 visible = false
