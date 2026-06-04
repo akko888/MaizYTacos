@@ -4,6 +4,11 @@ var player1_stats: CharacterStats = null
 var player2_stats: CharacterStats = null
 var selected_Stage: String = ""
 
+const CHARACTERS = [
+	{"name" : "Tacos el wero uwu", "stats" : "res://Config/Characters/Taquero.tres", "preview": preload("res://Assets/Characters/Taquero/Taquero.png") },
+	{"name" : "La chillona", "stats" : "res://Config/Characters/Llorona.tres", "preview" : preload("res://Assets/Characters/Llorona/Llorona.png") },
+]
+
 func reset() -> void:
 	player1_stats = null
 	player2_stats = null

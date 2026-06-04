@@ -2,11 +2,11 @@ class_name Player
 extends CharacterBody2D
 
 # Constants
-const JUMP_VELOCITY = -800.0
-const DASH_VELOCITY = 800.0
 const FRICTION = 625.0
 enum Side { LEFT, RIGHT }
 # Player Variables
+var JUMP_VELOCITY: float
+var DASH_VELOCITY: float
 @onready var sprite = $AnimatedSprite2D
 @onready var hurtbox = $Hurtbox
 @onready var hitbox = $Hitbox
@@ -25,10 +25,14 @@ var startSwipe = Vector2.ZERO
 
 #Signals
 signal health_changed(newHealth: float, maxHealth: float)
+@warning_ignore("unused_signal")
 signal died()
 
 func _ready() -> void:
 	health = stats.maxHealth
+	sprite.sprite_frames = stats.spriteFrames
+	DASH_VELOCITY = stats.DASH_VELOCITY
+	JUMP_VELOCITY = stats.JUMP_VELOCITY
 	
 	if screenSide == Side.RIGHT:
 		sprite.flip_h = true

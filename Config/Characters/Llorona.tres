@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CharacterStats" format=3 uid="uid://qt67l5a3nxei"]
+
+[ext_resource type="Script" uid="uid://bx5l6iguxlh6t" path="res://Scripts/PlayerScripts/CharacterStats.gd" id="1_16qs5"]
+[ext_resource type="SpriteFrames" uid="uid://birheso5oqlsw" path="res://Config/SpriteFrames/LlorornaSpriteFrame.tres" id="2_whutm"]
+
+[resource]
+script = ExtResource("1_16qs5")
+spriteFrames = ExtResource("2_whutm")
+maxHealth = 350.0
+DASH_VELOCITY = 500.0
+JUMP_VELOCITY = -600.0
+dashData = {
+"damage": 25.0,
+"knockback": 40.0
+}
+jumpData = {
+"damage": 30.0,
+"knockback": 800.0
+}
+comboData = [{
+"anim": "Attack1",
+"damage": 15.0,
+"knockback": 40.0
+}, {
+"anim": "Attack2",
+"damage": 15.0,
+"knockback": 60.0
+}, {
+"anim": "Attack3",
+"damage": 20.0,
+"knockback": 850.0
+}]
+metadata/_custom_type_script = "uid://bx5l6iguxlh6t"

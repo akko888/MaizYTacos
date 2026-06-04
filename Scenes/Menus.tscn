@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b55mimj1gd1ot"]
 
-[ext_resource type="Script" uid="uid://ysx12jkfuyc0" path="res://Scripts/Scene/menus.gd" id="1_jfwsv"]
+[ext_resource type="Script" uid="uid://ysx12jkfuyc0" path="res://Scripts/Scene/Menus.gd" id="1_jfwsv"]
 [ext_resource type="Texture2D" uid="uid://b5d5osp6lo1nf" path="res://Assets/Buttons/ChiliButton_0001.png" id="2_8smt0"]
 [ext_resource type="Texture2D" uid="uid://cl44nl0o2acam" path="res://Assets/Images/Title.png" id="2_ek14q"]
+[ext_resource type="Script" uid="uid://di25numyn5xtl" path="res://Scripts/Scene/menus/TtileScreen.gd" id="2_h1bg7"]
 [ext_resource type="Texture2D" uid="uid://1f1kms0sgftv" path="res://Assets/Buttons/ChiliButton_0003.png" id="3_t0msg"]
 [ext_resource type="Texture2D" uid="uid://cackrwrb8usen" path="res://Assets/Buttons/ChiliButton_0002.png" id="4_cr7co"]
 [ext_resource type="LabelSettings" uid="uid://ccmam6ggtveo0" path="res://Config/MenuLabel.tres" id="5_xw5h8"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bvkgglk6yn44t" path="res://Assets/Buttons/ModeSel/VsButton_0001.png" id="10_10m4s"]
 [ext_resource type="Texture2D" uid="uid://d3x5ssdhspxw" path="res://Assets/Buttons/knife_0003.png" id="10_xw5h8"]
 [ext_resource type="Texture2D" uid="uid://b5ctqesx6b8jq" path="res://Assets/Buttons/ModeSel/VsButton_0003.png" id="11_4sq2c"]
+[ext_resource type="Script" uid="uid://cfhfcfg1h6ojn" path="res://Scripts/Scene/menus/ModeSelect.gd" id="11_31om1"]
 [ext_resource type="Texture2D" uid="uid://cr2u6oh4cx856" path="res://Assets/Buttons/knife_0002.png" id="11_yuk0h"]
 [ext_resource type="Texture2D" uid="uid://baxodsna00yu6" path="res://Assets/Buttons/ModeSel/VsButton_0002.png" id="12_2gktr"]
 [ext_resource type="Texture2D" uid="uid://cipq1y8pqpjj2" path="res://Assets/Buttons/ModeSel/arcadeButton_0001.png" id="13_ocrow"]
@@ -45,6 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_h1bg7")
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="TitleScreen" unique_id=1324972985]
 layout_mode = 1
@@ -150,6 +153,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("11_31om1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ModeSelect" unique_id=1529199280]
 layout_mode = 1
@@ -312,6 +316,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="pressed" from="TitleScreen/ButtonsContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="ModeSelect/HBoxContainer/VsButton" to="." method="_on_vs_button_pressed"]
-[connection signal="pressed" from="ModeSelect/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="TitleScreen/ButtonsContainer/StartButton" to="TitleScreen" method="_on_start_button_pressed"]
+[connection signal="pressed" from="ModeSelect/HBoxContainer/VsButton" to="ModeSelect" method="_on_vs_button_pressed"]
+[connection signal="pressed" from="ModeSelect/BackButton" to="ModeSelect" method="_on_back_button_pressed"]

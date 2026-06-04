@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterStats" format=3 uid="uid://ikhmv46ydcid"]
+
+[ext_resource type="Script" uid="uid://bx5l6iguxlh6t" path="res://Scripts/PlayerScripts/CharacterStats.gd" id="1_4xtw3"]
+
+[resource]
+script = ExtResource("1_4xtw3")
+maxHealth = 300.0
+DASH_VELOCITY = 750.0
+JUMP_VELOCITY = -700.0
+dashData = {
+"damage": 15.0,
+"knockback": 40.0
+}
+comboData = [{
+"anim": "Attack1",
+"damage": 10.0,
+"knockback": 40.0
+}, {
+"anim": "Attack2",
+"damage": 10.0,
+"knockback": 60.0
+}, {
+"anim": "Attack3",
+"damage": 15.0,
+"knockback": 850.0
+}]
+metadata/_custom_type_script = "uid://bx5l6iguxlh6t"

@@ -1,7 +1,12 @@
 class_name CharacterStats
 extends Resource
 
+@export var spriteFrames: SpriteFrames
+
 @export var maxHealth: float = 200.0
+
+@export var DASH_VELOCITY: float = 800.0
+@export var JUMP_VELOCITY: float = -800.0
 
 @export var dashData = {
 	"damage": 20.0,
