@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct8axuinc1qdo"
-path="res://.godot/imported/CAT BASE_1.png-8dd56e4319da0245bfe8b99438fd261d.ctex"
+uid="uid://b2ns6c86yfyu0"
+path="res://.godot/imported/CharSelec_0003.png-a296c0f8e7b5d638e902d5bbaba6de27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlaceHolders/Cat_player/CAT BASE_1.png"
-dest_files=["res://.godot/imported/CAT BASE_1.png-8dd56e4319da0245bfe8b99438fd261d.ctex"]
+source_file="res://Assets/Buttons/CharSelec_0003.png"
+dest_files=["res://.godot/imported/CharSelec_0003.png-a296c0f8e7b5d638e902d5bbaba6de27.ctex"]
 
 [params]
 

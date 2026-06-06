@@ -26,9 +26,16 @@
 [ext_resource type="Texture2D" uid="uid://b6lowvplenfbc" path="res://Assets/Buttons/ModeSel/pastorButton_0001.png" id="19_3kyn4"]
 [ext_resource type="Texture2D" uid="uid://dbfplqfv3rrh8" path="res://Assets/Buttons/ModeSel/pastorButton_0003.png" id="20_rndyb"]
 [ext_resource type="Texture2D" uid="uid://bjlixcyks17yk" path="res://Assets/Buttons/ModeSel/pastorButton_0002.png" id="21_subhu"]
+[ext_resource type="Script" uid="uid://bvf46agvkwajv" path="res://Scripts/Scene/menus/CharSelect.gd" id="27_5n7og"]
+[ext_resource type="Texture2D" uid="uid://bbkcgr3rrst1v" path="res://Assets/Images/Select.png" id="27_u8b8k"]
+[ext_resource type="Texture2D" uid="uid://cb0pm41h288rg" path="res://Assets/Images/VSPortraid.png" id="29_waiuv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iypqj"]
 font_size = 37
+font_color = Color(0.9607843, 0.92941177, 0.7294118, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_waiuv"]
+font_size = 48
 font_color = Color(0.9607843, 0.92941177, 0.7294118, 1)
 
 [node name="Control" type="Control" unique_id=1823180006]
@@ -297,6 +304,96 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("27_5n7og")
+
+[node name="Player1Select" type="TextureRect" parent="CharSelect" unique_id=1984526529]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 256.0
+texture = ExtResource("27_u8b8k")
+
+[node name="Player2Select" type="TextureRect" parent="CharSelect" unique_id=92297324]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -416.0
+offset_bottom = 256.0
+grow_horizontal = 0
+texture = ExtResource("27_u8b8k")
+
+[node name="Player1Chars" type="GridContainer" parent="CharSelect" unique_id=710238971]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -464.0
+offset_right = 416.0
+grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="Playe2Chars" type="GridContainer" parent="CharSelect" unique_id=295857116]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -416.0
+offset_top = -464.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="CharSelect" unique_id=1775829327]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -360.0
+offset_right = 224.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("29_waiuv")
+
+[node name="ConfirmButton" type="TextureButton" parent="CharSelect" unique_id=107130096]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -64.0
+offset_right = 145.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_8smt0")
+texture_pressed = ExtResource("3_t0msg")
+texture_hover = ExtResource("4_cr7co")
+
+[node name="Label" type="Label" parent="CharSelect/ConfirmButton" unique_id=867148191]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -8.0
+offset_right = 86.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Madrazos!"
+label_settings = SubResource("LabelSettings_waiuv")
 
 [node name="StageSelect" type="Control" parent="." unique_id=1260477537]
 visible = false

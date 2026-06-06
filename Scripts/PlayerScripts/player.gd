@@ -29,15 +29,16 @@ signal health_changed(newHealth: float, maxHealth: float)
 signal died()
 
 func _ready() -> void:
-	health = stats.maxHealth
-	sprite.sprite_frames = stats.spriteFrames
-	DASH_VELOCITY = stats.DASH_VELOCITY
-	JUMP_VELOCITY = stats.JUMP_VELOCITY
-	
 	if screenSide == Side.RIGHT:
 		sprite.flip_h = true
 		facing = -1.0
 		hitbox.set_direction(facing)
+
+func initialize() -> void:
+	health = stats.maxHealth
+	sprite.sprite_frames = stats.spriteFrames
+	DASH_VELOCITY = stats.DASH_VELOCITY
+	JUMP_VELOCITY = stats.JUMP_VELOCITY
 	stateMachine = StateMachine.new()
 	stateMachine.change_state(IdleState.new(self, stateMachine))
 

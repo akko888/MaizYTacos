@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="CharacterStats" format=3 uid="uid://ikhmv46ydcid"]
 
 [ext_resource type="Script" uid="uid://bx5l6iguxlh6t" path="res://Scripts/PlayerScripts/CharacterStats.gd" id="1_4xtw3"]
+[ext_resource type="SpriteFrames" uid="uid://dc0uu853g480q" path="res://Config/SpriteFrames/TaqueroSpriteFrames.tres" id="2_6bmqp"]
 
 [resource]
 script = ExtResource("1_4xtw3")
+spriteFrames = ExtResource("2_6bmqp")
 maxHealth = 300.0
 DASH_VELOCITY = 750.0
 JUMP_VELOCITY = -700.0

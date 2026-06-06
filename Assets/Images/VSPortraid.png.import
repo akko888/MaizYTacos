@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpjwcot0q863k"
-path="res://.godot/imported/Cat_jump_1.png-556d944c15947f24f005f7589e6ea2d7.ctex"
+uid="uid://cb0pm41h288rg"
+path="res://.godot/imported/VSPortraid.png-8d6bbe1576b443df684bf8fd8e24374f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlaceHolders/Cat_player/Cat_sheets/Cat_jump_1.png"
-dest_files=["res://.godot/imported/Cat_jump_1.png-556d944c15947f24f005f7589e6ea2d7.ctex"]
+source_file="res://Assets/Images/VSPortraid.png"
+dest_files=["res://.godot/imported/VSPortraid.png-8d6bbe1576b443df684bf8fd8e24374f.ctex"]
 
 [params]
 

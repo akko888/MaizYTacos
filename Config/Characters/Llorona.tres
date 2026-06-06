@@ -7,7 +7,7 @@
 script = ExtResource("1_16qs5")
 spriteFrames = ExtResource("2_whutm")
 maxHealth = 350.0
-DASH_VELOCITY = 500.0
+DASH_VELOCITY = 650.0
 JUMP_VELOCITY = -600.0
 dashData = {
 "damage": 25.0,

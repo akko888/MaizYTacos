@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bnq8l3nsb5feh"]
+
+[ext_resource type="Texture2D" uid="uid://ej0j2a3eg4ah" path="res://Assets/Buttons/CharSelec_0001.png" id="1_7ymo8"]
+[ext_resource type="Texture2D" uid="uid://b2ns6c86yfyu0" path="res://Assets/Buttons/CharSelec_0003.png" id="2_urb20"]
+[ext_resource type="Texture2D" uid="uid://cmoy5dwjucexe" path="res://Assets/Buttons/CharSelec_0002.png" id="3_7c5ym"]
+[ext_resource type="Script" uid="uid://vdpti7my7jga" path="res://Scripts/GUI/CharacterCard.gd" id="4_ep7eu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7c5ym"]
+font_size = 15
+font_color = Color(0.96862745, 0.89411765, 0.4627451, 1)
+outline_size = 4
+outline_color = Color(0.12156863, 0.05490196, 0.10980392, 1)
+shadow_size = 4
+shadow_color = Color(0.34509805, 0.27058825, 0.3882353, 1)
+
+[node name="TextureButton" type="TextureButton" unique_id=1236348349]
+offset_right = 128.0
+offset_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_7ymo8")
+texture_pressed = ExtResource("2_urb20")
+texture_hover = ExtResource("3_7c5ym")
+stretch_mode = 0
+script = ExtResource("4_ep7eu")
+
+[node name="Label" type="Label" parent="." unique_id=1068840977]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -34.0
+offset_right = 48.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_7c5ym")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2115890230]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -48.0
+offset_right = 42.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2

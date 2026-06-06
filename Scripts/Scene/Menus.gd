@@ -12,7 +12,8 @@ var currentScene: String = "title"
 
 func _ready() -> void:
 	$TitleScreen.startPressed.connect(_on_navigation_button_pressed)
-	$ModeSelect.backPressed.connect(_on_navigation_button_pressed)
+	$ModeSelect.onModePressed.connect(_on_navigation_button_pressed)
+	$CharSelect.characterConfirmed.connect(_on_character_confirmed)
 
 func go_to(screen: String) -> void:
 	var tween = create_tween()
@@ -26,3 +27,8 @@ func go_to(screen: String) -> void:
 
 func _on_navigation_button_pressed(destination: String):
 	go_to(destination)
+
+func _on_character_confirmed(p1Path: String, p2Path: String) -> void:
+	GameData.player1_stats = load(p1Path)
+	GameData.player2_stats = load(p2Path)
+	get_tree().change_scene_to_file("res://Scenes/Scene.tscn")

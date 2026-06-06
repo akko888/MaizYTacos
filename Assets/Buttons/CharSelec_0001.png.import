@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf5wyvxrvg03o"
-path="res://.godot/imported/Cat_ladder_1.png-b147a1692af893a2ebe90ca82b42fdda.ctex"
+uid="uid://ej0j2a3eg4ah"
+path="res://.godot/imported/CharSelec_0001.png-b62d89d4450b8969c56e0c3e3b3db0f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlaceHolders/Cat_player/Cat_sheets/Cat_ladder_1.png"
-dest_files=["res://.godot/imported/Cat_ladder_1.png-b147a1692af893a2ebe90ca82b42fdda.ctex"]
+source_file="res://Assets/Buttons/CharSelec_0001.png"
+dest_files=["res://.godot/imported/CharSelec_0001.png-b62d89d4450b8969c56e0c3e3b3db0f6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0hjyayx3ely"
-path="res://.godot/imported/Cat_ducking_idle_1.png-d209111cc9407588fda2e1821dd8bbca.ctex"
+uid="uid://bbkcgr3rrst1v"
+path="res://.godot/imported/Select.png-f78f0697757638402bf5cec787f92c57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlaceHolders/Cat_player/Cat_sheets/Cat_ducking_idle_1.png"
-dest_files=["res://.godot/imported/Cat_ducking_idle_1.png-d209111cc9407588fda2e1821dd8bbca.ctex"]
+source_file="res://Assets/Images/Select.png"
+dest_files=["res://.godot/imported/Select.png-f78f0697757638402bf5cec787f92c57.ctex"]
 
 [params]
 

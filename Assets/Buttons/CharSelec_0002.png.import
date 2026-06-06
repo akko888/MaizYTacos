@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xuoqs6sne362"
-path="res://.godot/imported/Cat_against_wall.png-8e01ebbbdd3ca7bad0dc0eabac91a614.ctex"
+uid="uid://cmoy5dwjucexe"
+path="res://.godot/imported/CharSelec_0002.png-cc68880e9e5ab058d4a24c2acf6eb9f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlaceHolders/Cat_player/Cat_sheets/Cat_against_wall.png"
-dest_files=["res://.godot/imported/Cat_against_wall.png-8e01ebbbdd3ca7bad0dc0eabac91a614.ctex"]
+source_file="res://Assets/Buttons/CharSelec_0002.png"
+dest_files=["res://.godot/imported/CharSelec_0002.png-cc68880e9e5ab058d4a24c2acf6eb9f9.ctex"]
 
 [params]
 

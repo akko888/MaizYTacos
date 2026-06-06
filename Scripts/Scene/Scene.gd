@@ -1,6 +1,12 @@
 extends Node2D
 
 func _ready() -> void:
+	$Player1.stats = GameData.player1_stats
+	$Player2.stats = GameData.player2_stats
+	
+	$Player1.initialize()
+	$Player2.initialize()
+	
 	$GUI/Progress_Bars/Bar1/TextureProgressBar.setup($Player1)
 	$GUI/Progress_Bars/Bar2/TextureProgressBar2.setup($Player2)
 	
