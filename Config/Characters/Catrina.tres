@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_1wiy0")
+name = "La Catrina"
 spriteFrames = ExtResource("2_1wiy0")
 maxHealth = 400.0
 DASH_VELOCITY = 600.0

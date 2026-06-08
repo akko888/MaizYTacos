@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="MaizYTacos"
+config/name="Ajolotazo"
 config/description="Maíz y Tacos is a mobile fighting game based on gestures as movements. It is set in the mexican culture and references!"
 run/main_scene="uid://b55mimj1gd1ot"
 config/features=PackedStringArray("4.6", "Mobile")

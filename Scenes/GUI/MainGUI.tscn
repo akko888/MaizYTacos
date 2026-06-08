@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://da7whyxmmhutt"]
+
+[ext_resource type="Script" uid="uid://bi3oxlf545lsg" path="res://Scripts/GUI/HealthBar.gd" id="1_t4po4"]
+[ext_resource type="Texture2D" uid="uid://yg00nswti7xc" path="res://Assets/Images/PogressBar_0003.png" id="2_cgtkq"]
+[ext_resource type="Texture2D" uid="uid://dwmkm30kmwlh1" path="res://Assets/Images/PogressBar_0001.png" id="3_stfxh"]
+[ext_resource type="Texture2D" uid="uid://bip4opaqk5nio" path="res://Assets/Images/PogressBar_0002.png" id="4_n00f8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hnt51"]
+font_size = 40
+font_color = Color(0.8235294, 0.39215687, 0.44313726, 1)
+outline_size = 10
+outline_color = Color(0.12156863, 0.05490196, 0.10980392, 1)
+shadow_size = 12
+shadow_color = Color(0.24313726, 0.12941177, 0.21568628, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cgtkq"]
+font_size = 40
+font_color = Color(0.7529412, 0.78039217, 0.25490198, 1)
+outline_size = 10
+outline_color = Color(0.12156863, 0.05490196, 0.10980392, 1)
+shadow_size = 12
+shadow_color = Color(0.24313726, 0.12941177, 0.21568628, 1)
+
+[node name="MainGUI" type="HBoxContainer" unique_id=517572249]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.13900001
+offset_bottom = -0.08000946
+grow_horizontal = 2
+alignment = 1
+
+[node name="P1" type="Label" parent="." unique_id=440465110]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_hnt51")
+
+[node name="labelSeparator" type="HSeparator" parent="." unique_id=1259568852]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Bar1" type="Control" parent="." unique_id=1065773955]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Bar1" unique_id=755047729]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 8.0
+scale = Vector2(8, 8)
+texture_under = ExtResource("2_cgtkq")
+texture_over = ExtResource("3_stfxh")
+texture_progress = ExtResource("4_n00f8")
+script = ExtResource("1_t4po4")
+
+[node name="middleSeparator" type="HSeparator" parent="." unique_id=685271076]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Bar2" type="Control" parent="." unique_id=364740353]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="Bar2" unique_id=1505248899]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 8.0
+scale = Vector2(8, 8)
+texture_under = ExtResource("2_cgtkq")
+texture_over = ExtResource("3_stfxh")
+texture_progress = ExtResource("4_n00f8")
+script = ExtResource("1_t4po4")
+
+[node name="labelSeparator2" type="HSeparator" parent="." unique_id=813760644]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="P2" type="Label" parent="." unique_id=437219922]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_cgtkq")

@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_16qs5")
+name = "La Chillona"
 spriteFrames = ExtResource("2_whutm")
 maxHealth = 350.0
 DASH_VELOCITY = 650.0

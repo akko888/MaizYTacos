@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_4hjff")
+name = "El Santo"
 spriteFrames = ExtResource("2_4hjff")
 maxHealth = 250.0
 DASH_VELOCITY = 700.0

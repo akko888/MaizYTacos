@@ -1,6 +1,7 @@
 class_name CharacterStats
 extends Resource
 
+@export var name: String
 @export var spriteFrames: SpriteFrames
 
 @export var maxHealth: float = 200.0

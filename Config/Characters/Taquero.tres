@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_4xtw3")
+name = "Tacos el Wero"
 spriteFrames = ExtResource("2_6bmqp")
 maxHealth = 300.0
 DASH_VELOCITY = 750.0

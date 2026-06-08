@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dghdtmfn70d12"]
+
+[ext_resource type="Script" uid="uid://kutrn1rxof8h" path="res://Scripts/GUI/PauseMenu.gd" id="1_4ttdu"]
+[ext_resource type="Texture2D" uid="uid://b5d5osp6lo1nf" path="res://Assets/Buttons/ChiliButton_0001.png" id="1_bbstj"]
+[ext_resource type="Texture2D" uid="uid://1f1kms0sgftv" path="res://Assets/Buttons/ChiliButton_0003.png" id="2_4ttdu"]
+[ext_resource type="Texture2D" uid="uid://cackrwrb8usen" path="res://Assets/Buttons/ChiliButton_0002.png" id="3_li0uc"]
+[ext_resource type="LabelSettings" uid="uid://ccmam6ggtveo0" path="res://Config/MenuLabel.tres" id="4_db7go"]
+
+[node name="Control" type="Control" unique_id=43451815]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ttdu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=89716862]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.3764706, 0.42352942, 0.5058824, 0.11764706)
+
+[node name="Panel" type="VBoxContainer" parent="Background" unique_id=840897648]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Resume" type="TextureButton" parent="Background/Panel" unique_id=858893812]
+process_mode = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("1_bbstj")
+texture_pressed = ExtResource("2_4ttdu")
+texture_hover = ExtResource("3_li0uc")
+
+[node name="Label" type="Label" parent="Background/Panel/Resume" unique_id=1878215689]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.5
+offset_top = 7.0
+offset_right = 64.5
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resumir"
+label_settings = ExtResource("4_db7go")
+
+[node name="Exit" type="TextureButton" parent="Background/Panel" unique_id=1123902169]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("1_bbstj")
+texture_pressed = ExtResource("2_4ttdu")
+texture_hover = ExtResource("3_li0uc")
+
+[node name="Label" type="Label" parent="Background/Panel/Exit" unique_id=2027033811]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = 10.0
+offset_right = 31.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Salir"
+label_settings = ExtResource("4_db7go")
+
+[connection signal="pressed" from="Background/Panel/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Background/Panel/Exit" to="." method="_on_exit_pressed"]
