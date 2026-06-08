@@ -15,6 +15,7 @@ func _ready() -> void:
 	$ModeSelect.onModePressed.connect(_on_navigation_button_pressed)
 	$CharSelect.onCharPressed.connect(_on_navigation_button_pressed)
 	$CharSelect.characterConfirmed.connect(_on_character_confirmed)
+	$StageSelect.stageConfirmed.connect(_on_stage_confirmed)
 
 func go_to(screen: String) -> void:
 	var tween = create_tween()
@@ -26,10 +27,14 @@ func go_to(screen: String) -> void:
 	tween.tween_property(screens[screen],"modulate:a", 1.0, 0.15)
 	currentScene = screen
 
-func _on_navigation_button_pressed(destination: String):
+func _on_navigation_button_pressed(destination: String) -> void:
 	go_to(destination)
+
+func _on_stage_confirmed(stagePath: String) -> void:
+	GameData.selected_Stage = stagePath
+	get_tree().change_scene_to_file(GameData.selected_Stage)
 
 func _on_character_confirmed(p1Path: String, p2Path: String) -> void:
 	GameData.player1_stats = load(p1Path)
 	GameData.player2_stats = load(p2Path)
-	get_tree().change_scene_to_file("res://Scenes/Scene.tscn")
+	go_to("stage")

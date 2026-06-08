@@ -25,7 +25,6 @@ GameData="*uid://ceq3dj6x4re2y"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [gui]
 

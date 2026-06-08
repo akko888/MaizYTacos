@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://dmmyxrwfwnito"]
+
+[ext_resource type="Script" uid="uid://c7hb1ma52h16d" path="res://Scripts/Scene/Scene.gd" id="1_67t20"]
+[ext_resource type="Texture2D" uid="uid://bwo77va8x5naa" path="res://Assets/Scenes/Phase2.png" id="2_67t20"]
+[ext_resource type="PackedScene" uid="uid://bi5oo3ewqykqv" path="res://Scenes/Player.tscn" id="3_gjpra"]
+[ext_resource type="Script" uid="uid://bx5l6iguxlh6t" path="res://Scripts/PlayerScripts/CharacterStats.gd" id="4_1m0sn"]
+[ext_resource type="PackedScene" uid="uid://da7whyxmmhutt" path="res://Scenes/GUI/MainGUI.tscn" id="5_4hvjy"]
+[ext_resource type="Texture2D" uid="uid://ckfali308wjt" path="res://Assets/Buttons/Pause_0001.png" id="6_kxdvt"]
+[ext_resource type="Texture2D" uid="uid://kyljb326xrh0" path="res://Assets/Buttons/Pause_0003.png" id="7_5o8gu"]
+[ext_resource type="Texture2D" uid="uid://dyt2nd80j0o14" path="res://Assets/Buttons/Pause_0002.png" id="8_43a5n"]
+[ext_resource type="Script" uid="uid://ct63w2g74rhqv" path="res://Scripts/GUI/PauseButton.gd" id="9_4lbn3"]
+[ext_resource type="LabelSettings" uid="uid://ccmam6ggtveo0" path="res://Config/MenuLabel.tres" id="10_lo5cw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb6nf"]
+atlas = ExtResource("2_67t20")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjpra"]
+atlas = ExtResource("2_67t20")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1m0sn"]
+atlas = ExtResource("2_67t20")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v5su0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb6nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjpra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1m0sn")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf2k1"]
+size = Vector2(1280, 100)
+
+[sub_resource type="Resource" id="Resource_khr67"]
+script = ExtResource("4_1m0sn")
+metadata/_custom_type_script = "uid://bx5l6iguxlh6t"
+
+[sub_resource type="Resource" id="Resource_s7xl2"]
+script = ExtResource("4_1m0sn")
+metadata/_custom_type_script = "uid://bx5l6iguxlh6t"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjdyk"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrus4"]
+size = Vector2(1280, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6gg1"]
+size = Vector2(20, 720)
+
+[node name="Scene" type="Node2D" unique_id=2142566041]
+script = ExtResource("1_67t20")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=723607400]
+position = Vector2(640, 360)
+scale = Vector2(10, 12)
+sprite_frames = SubResource("SpriteFrames_v5su0")
+animation = &"Normal"
+autoplay = "Normal"
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1910788280]
+position = Vector2(0, 660)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1462669934]
+position = Vector2(640, 10)
+shape = SubResource("RectangleShape2D_gf2k1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1866117849]
+position = Vector2(640, 360)
+
+[node name="Player1" parent="." unique_id=2135870302 instance=ExtResource("3_gjpra")]
+position = Vector2(208, 535)
+stats = SubResource("Resource_khr67")
+
+[node name="Player2" parent="." unique_id=123105804 instance=ExtResource("3_gjpra")]
+position = Vector2(1013, 517)
+screenSide = 1
+stats = SubResource("Resource_s7xl2")
+
+[node name="Wall1" type="StaticBody2D" parent="." unique_id=638350149]
+position = Vector2(0, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1" unique_id=369982633]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_gjdyk")
+
+[node name="Wall3" type="StaticBody2D" parent="." unique_id=2078075770]
+position = Vector2(640, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" unique_id=1546876884]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_lrus4")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=999800994]
+position = Vector2(1280, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=1261021541]
+position = Vector2(10, 0)
+shape = SubResource("RectangleShape2D_p6gg1")
+
+[node name="GUI" type="Control" parent="." unique_id=1929422593]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainGUI" parent="GUI" unique_id=517572249 instance=ExtResource("5_4hvjy")]
+layout_mode = 1
+grow_horizontal = 1
+
+[node name="PauseButton" type="TextureButton" parent="GUI" unique_id=103581166]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.0
+offset_top = 21.0
+offset_right = 24.0
+offset_bottom = 69.0
+grow_horizontal = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("6_kxdvt")
+texture_pressed = ExtResource("7_5o8gu")
+texture_hover = ExtResource("8_43a5n")
+script = ExtResource("9_4lbn3")
+
+[node name="WinLabel" type="Label" parent="GUI" unique_id=936146446]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("10_lo5cw")

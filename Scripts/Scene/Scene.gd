@@ -28,7 +28,11 @@ func _ready() -> void:
 
 
 func _on_player_died(winnerText: String):
-	print(winnerText)
+	$GUI/WinLabel.text = winnerText
+	
+	await get_tree().create_timer(1.5).timeout
+	GameData.reset()
+	get_tree().change_scene_to_file("res://Scenes/Menus.tscn")
 
 func _toogle_pause(isPaused: bool) -> void:
 	get_tree().paused = isPaused

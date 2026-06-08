@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://bbkcgr3rrst1v" path="res://Assets/Images/Select.png" id="27_u8b8k"]
 [ext_resource type="Texture2D" uid="uid://cb0pm41h288rg" path="res://Assets/Images/VSPortraid.png" id="29_waiuv"]
 [ext_resource type="Texture2D" uid="uid://joc43ehafvp3" path="res://Assets/Scenes/Menu2.png" id="32_iypqj"]
+[ext_resource type="Script" uid="uid://mhtwsmmitk23" path="res://Scripts/Scene/menus/StageSelect.gd" id="32_p7g5v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iypqj"]
 font_size = 37
@@ -518,12 +519,79 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("32_p7g5v")
 
 [node name="Background" type="TextureRect" parent="StageSelect" unique_id=1221765069]
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 texture = ExtResource("32_iypqj")
+
+[node name="PreviewLabel" type="Label" parent="StageSelect" unique_id=2113999955]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -120.0
+offset_right = 20.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = ExtResource("5_xw5h8")
+
+[node name="StageContainer" type="VBoxContainer" parent="StageSelect" unique_id=614560224]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -259.0
+offset_right = 450.0
+offset_bottom = 191.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="TextureButton" parent="StageSelect" unique_id=1758784553]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -304.0
+offset_top = -198.0
+offset_right = -16.0
+offset_bottom = -54.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+disabled = true
+texture_normal = ExtResource("2_8smt0")
+texture_pressed = ExtResource("3_t0msg")
+texture_hover = ExtResource("4_cr7co")
+
+[node name="Label" type="Label" parent="StageSelect/PlayButton" unique_id=1635720549]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 9.250015
+offset_right = 49.0
+offset_bottom = 61.250015
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pelea!"
+label_settings = ExtResource("5_xw5h8")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Gallery" type="Control" parent="." unique_id=923881135]
 visible = false
@@ -538,3 +606,4 @@ grow_vertical = 2
 [connection signal="pressed" from="ModeSelect/HBoxContainer/VsButton" to="ModeSelect" method="_on_vs_button_pressed"]
 [connection signal="pressed" from="ModeSelect/BackButton" to="ModeSelect" method="_on_back_button_pressed"]
 [connection signal="pressed" from="CharSelect/TextureRect/BackButton" to="CharSelect" method="_on_back_button_pressed"]
+[connection signal="pressed" from="StageSelect/PlayButton" to="StageSelect" method="_on_play_button_pressed"]

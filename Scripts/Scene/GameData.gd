@@ -4,6 +4,11 @@ var player1_stats: CharacterStats = null
 var player2_stats: CharacterStats = null
 var selected_Stage: String = ""
 
+const Stages = [
+	{ "name" : "Oxxo en el valdio", "path" : "res://Scenes/Phase1.tscn" },
+	{ "name" : "La gran ciudad", "path" : "res://Scenes/Phase2.tscn" }
+]
+
 const CHARACTERS = [
 	{"name" : "Tacos el wero uwu", "stats" : "res://Config/Characters/Taquero.tres", "preview": preload("res://Assets/Characters/Taquero/Taquero.png") },
 	{"name" : "La chillona", "stats" : "res://Config/Characters/Llorona.tres", "preview" : preload("res://Assets/Characters/Llorona/Llorona.png") },
