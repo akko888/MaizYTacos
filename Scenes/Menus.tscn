@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://bbkcgr3rrst1v" path="res://Assets/Images/Select.png" id="27_u8b8k"]
 [ext_resource type="Texture2D" uid="uid://cb0pm41h288rg" path="res://Assets/Images/VSPortraid.png" id="29_waiuv"]
 [ext_resource type="Texture2D" uid="uid://joc43ehafvp3" path="res://Assets/Scenes/Menu2.png" id="32_iypqj"]
-[ext_resource type="Script" uid="uid://mhtwsmmitk23" path="res://Scripts/Scene/menus/StageSelect.gd" id="32_p7g5v"]
+[ext_resource type="Script" path="res://Scripts/Scene/menus/StageSelect.gd" id="32_p7g5v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iypqj"]
 font_size = 37
@@ -61,6 +61,7 @@ grow_vertical = 2
 script = ExtResource("1_jfwsv")
 
 [node name="TitleScreen" type="Control" parent="." unique_id=2063810978]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,6 +117,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GalleryButton" type="TextureButton" parent="TitleScreen/ButtonsContainer" unique_id=1851247605]
+modulate = Color(1, 1, 1, 0.78431374)
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -155,6 +157,7 @@ grow_horizontal = 2
 texture = ExtResource("2_ek14q")
 
 [node name="TextureButton" type="TextureButton" parent="TitleScreen" unique_id=974985416]
+modulate = Color(1, 1, 1, 0.78431374)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -210,6 +213,7 @@ texture_pressed = ExtResource("11_4sq2c")
 texture_hover = ExtResource("12_2gktr")
 
 [node name="ArcadeButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1784932126]
+modulate = Color(1, 1, 1, 0.78431374)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("13_ocrow")
@@ -233,6 +237,7 @@ text = "Arcade"
 label_settings = SubResource("LabelSettings_iypqj")
 
 [node name="TutorialButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=1676322019]
+modulate = Color(1, 1, 1, 0.78431374)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("16_u8b8k")
@@ -256,6 +261,7 @@ text = "Tutorial"
 label_settings = SubResource("LabelSettings_iypqj")
 
 [node name="PastorButton" type="TextureButton" parent="ModeSelect/HBoxContainer" unique_id=699615568]
+modulate = Color(1, 1, 1, 0.78431374)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("19_3kyn4")

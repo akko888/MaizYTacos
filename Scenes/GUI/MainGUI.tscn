@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://da7whyxmmhutt"]
+[gd_scene format=3 uid="uid://6p7ed3tvxd6e"]
 
 [ext_resource type="Script" uid="uid://bi3oxlf545lsg" path="res://Scripts/GUI/HealthBar.gd" id="1_t4po4"]
 [ext_resource type="Texture2D" uid="uid://yg00nswti7xc" path="res://Assets/Images/PogressBar_0003.png" id="2_cgtkq"]

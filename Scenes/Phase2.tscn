@@ -1,14 +1,14 @@
-[gd_scene format=3 uid="uid://dmmyxrwfwnito"]
+[gd_scene format=3 uid="uid://bh28qb6la60yp"]
 
 [ext_resource type="Script" uid="uid://c7hb1ma52h16d" path="res://Scripts/Scene/Scene.gd" id="1_67t20"]
 [ext_resource type="Texture2D" uid="uid://bwo77va8x5naa" path="res://Assets/Scenes/Phase2.png" id="2_67t20"]
 [ext_resource type="PackedScene" uid="uid://bi5oo3ewqykqv" path="res://Scenes/Player.tscn" id="3_gjpra"]
 [ext_resource type="Script" uid="uid://bx5l6iguxlh6t" path="res://Scripts/PlayerScripts/CharacterStats.gd" id="4_1m0sn"]
-[ext_resource type="PackedScene" uid="uid://da7whyxmmhutt" path="res://Scenes/GUI/MainGUI.tscn" id="5_4hvjy"]
+[ext_resource type="PackedScene" uid="uid://6p7ed3tvxd6e" path="res://Scenes/GUI/MainGUI.tscn" id="5_67t20"]
 [ext_resource type="Texture2D" uid="uid://ckfali308wjt" path="res://Assets/Buttons/Pause_0001.png" id="6_kxdvt"]
 [ext_resource type="Texture2D" uid="uid://kyljb326xrh0" path="res://Assets/Buttons/Pause_0003.png" id="7_5o8gu"]
 [ext_resource type="Texture2D" uid="uid://dyt2nd80j0o14" path="res://Assets/Buttons/Pause_0002.png" id="8_43a5n"]
-[ext_resource type="Script" uid="uid://ct63w2g74rhqv" path="res://Scripts/GUI/PauseButton.gd" id="9_4lbn3"]
+[ext_resource type="Script" path="res://Scripts/GUI/PauseButton.gd" id="9_4lbn3"]
 [ext_resource type="LabelSettings" uid="uid://ccmam6ggtveo0" path="res://Config/MenuLabel.tres" id="10_lo5cw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eb6nf"]
@@ -121,9 +121,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="MainGUI" parent="GUI" unique_id=517572249 instance=ExtResource("5_4hvjy")]
-layout_mode = 1
-grow_horizontal = 1
+[node name="MainGUI" parent="GUI" unique_id=517572249 instance=ExtResource("5_67t20")]
+layout_mode = 0
+anchors_preset = 0
 
 [node name="PauseButton" type="TextureButton" parent="GUI" unique_id=103581166]
 layout_mode = 1

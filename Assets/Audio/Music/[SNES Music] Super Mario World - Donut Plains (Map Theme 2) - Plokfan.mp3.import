@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://defvrrqixwkrw"
+path="res://.godot/imported/[SNES Music] Super Mario World - Donut Plains (Map Theme 2) - Plokfan.mp3-2ad72a56e6ad31f4ce7b46d3aca7ecfa.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/[SNES Music] Super Mario World - Donut Plains (Map Theme 2) - Plokfan.mp3"
+dest_files=["res://.godot/imported/[SNES Music] Super Mario World - Donut Plains (Map Theme 2) - Plokfan.mp3-2ad72a56e6ad31f4ce7b46d3aca7ecfa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

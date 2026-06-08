@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d24ci0vy4jeht"
+path="res://.godot/imported/Select Screen - Mario Kart 64 OST - Neutri Bros..mp3-ee5272f0b04655f16c4f5ae31ff131db.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Select Screen - Mario Kart 64 OST - Neutri Bros..mp3"
+dest_files=["res://.godot/imported/Select Screen - Mario Kart 64 OST - Neutri Bros..mp3-ee5272f0b04655f16c4f5ae31ff131db.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,6 +4,15 @@ const PasueMenu = preload("res://Scenes/GUI/PauseMenu.tscn")
 var pasueMenu: Control
 
 func _ready() -> void:
+	
+	var scene_music_map = {
+		"res://Scenes/Phase1.tscn" : "phase1",
+		"res://Scenes/Phase2.tscn" : "phase2",
+	}
+	var current = get_tree().current_scene.scene_file_path
+	if scene_music_map.has(current):
+		AudioManager.play_music(scene_music_map[current])
+	
 	$Player1.stats = GameData.player1_stats
 	$Player2.stats = GameData.player2_stats
 	

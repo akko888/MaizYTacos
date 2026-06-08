@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tys72mgeh8nu"
+path="res://.godot/imported/Kirby's Adventure (NES) Music - Ice Cream Island 2 no Intro - GBelair.mp3-ff68e1fc55d3c4459d958c64957f6a0f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Kirby's Adventure (NES) Music - Ice Cream Island 2 no Intro - GBelair.mp3"
+dest_files=["res://.godot/imported/Kirby's Adventure (NES) Music - Ice Cream Island 2 no Intro - GBelair.mp3-ff68e1fc55d3c4459d958c64957f6a0f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
